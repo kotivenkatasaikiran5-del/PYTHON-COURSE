@@ -21,7 +21,7 @@ elif os.path.isdir(file):
 
         size=os.path.getsize(path)
         print(item,"-",size,"Bytes")
-        extension=os.path.split(item)[0]
+        extension=os.path.split(item)
         if extension in interest:
            print("cofidentail file",item)
      else:
