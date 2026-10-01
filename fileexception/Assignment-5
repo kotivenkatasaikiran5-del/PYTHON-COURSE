@@ -1,0 +1,13 @@
+import os
+path=input("Enter the Directory to check ")
+file=input("Enter the File in Directory to verify ")
+if os.path.isdir(path):
+    print(f"The {path} is exists")
+    item=os.path.join(path,file)
+    if os.path.exists(item):
+        print(f"The {file} in {path} is exists")
+    else:
+        print(f"The {file} in {path} is not exists")
+else:
+    print("Enter the correct path")
+

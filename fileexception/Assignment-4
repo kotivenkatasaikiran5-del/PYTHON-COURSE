@@ -1,0 +1,21 @@
+import os
+path=input("Enter the file or directory ")
+if os.path.exists(path):
+    print(f"{path} exists")
+    if os.path.isfile(path):
+        print(f"{path} is a file")
+    elif os.path.isdir(path):
+        print(f"{path} is a directory")
+        items=os.listdir(path)
+        for item in items:
+            dir=os.path.join(path,item)
+            if os.path.isfile(dir):
+                print(item,">file")
+                size=os.path.getsize(dir)
+                print(size)
+            elif os.path.isdir(dir):
+                print(item,">directory")
+            else:
+                print("It is a directory")
+else:
+    print("Enter the corerct path")
