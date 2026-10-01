@@ -1,0 +1,17 @@
+import os
+path=input("Enter the Directory to check ")
+if os.path.exists(path):
+    print(f"The {path} is exists")
+    if os.path.isdir(path):
+        print(f"The {path} is a Directory")
+        items=os.listdir(path)
+        for item in items:
+            full=os.path.join(path,item)
+            if os.path.isfile(full):
+                print(f"These are the only files {item}")
+          
+else:
+    print("Enter only Directory not files")               
+
+            
+
